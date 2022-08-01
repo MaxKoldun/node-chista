@@ -49,6 +49,8 @@ async function renderPromiseAsJson(req, res, promise, logger = consoleLogger) {
 
         data.status = 1;
 
+        console.log(res.headers);
+
         return res.send(data);
     } catch (error) {
         /* istanbul ignore next */
