@@ -14,7 +14,11 @@ export default class ServiceBase {
 
         const cleanParams = await this.validate(params);
 
-        return this.execute(cleanParams);
+        const result = await this.execute(cleanParams);
+        
+        console.log(result);
+
+        return result;
     }
 
     validate(data) {
